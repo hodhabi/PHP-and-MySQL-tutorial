@@ -1,7 +1,7 @@
 <?php
 
 // This file update a give record using the primery key id.
-//To use this file you may make the following changes.
+
 
 
 
