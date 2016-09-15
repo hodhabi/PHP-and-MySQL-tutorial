@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 15, 2016 at 08:56 PM
+-- Generation Time: Sep 15, 2016 at 09:24 PM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -45,7 +45,22 @@ CREATE TABLE IF NOT EXISTS `crn` (
   `coursecode` varchar(8) NOT NULL,
   `studentid` varchar(11) NOT NULL,
   `marks` int(3) DEFAULT NULL,
-  `grade` int(11) DEFAULT NULL
+  `grade` int(11) DEFAULT NULL,
+  `facultyID` varchar(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `faculty`
+--
+
+CREATE TABLE IF NOT EXISTS `faculty` (
+  `facultyID` varchar(11) NOT NULL,
+  `fullname` int(11) NOT NULL,
+  `email` int(11) NOT NULL,
+  `phone` int(11) NOT NULL,
+  `photo` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -162,6 +177,19 @@ CREATE TABLE IF NOT EXISTS `student` (
   `photo` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `fullname` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Indexes for dumped tables
 --
@@ -179,6 +207,12 @@ ALTER TABLE `crn`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `faculty`
+--
+ALTER TABLE `faculty`
+  ADD PRIMARY KEY (`facultyID`);
+
+--
 -- Indexes for table `MyGuests`
 --
 ALTER TABLE `MyGuests`
@@ -189,6 +223,12 @@ ALTER TABLE `MyGuests`
 --
 ALTER TABLE `student`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
