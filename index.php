@@ -1,49 +1,68 @@
-<!DOCTYPE HTML>
+<?php
+include('login.php'); // Includes Login Script
+require_once('header.php');
+
+if(isset($_SESSION['login_user'])){
+header("location: profile.php");
+}
+
+//require_once("header.php")
+
+?>
+<!DOCTYPE html>
+<html>
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
+<title>Student Information Systems</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<Style>
+
+
+#ff{
+  border: 2px solid;
+  width: 80%;
+  margin:100px;
+  margin-left:10%;
+  margin-right:10%;
+  padding: 5px;
+  text-align: center;
+  
+}
+h1{
+  text-align: center;
+}
+
+	
+
+
+</Style>
+
+ <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style>
-#mtable{
-    width: 80%;
-    border: 2px solid;
-    margin-left: 10%;
-}
-</style>
+  
+ 
 </head>
 <body>
+
+
+
+<div id="ff">
+<form action="" method="post">
+
+<div class="form-group">
+<input class="form-control" id="name" name="username" placeholder="username" type="text">
+<input class="form-control" id="password" name="password" placeholder="**********" type="password">
+<input class="btn btn-default" name="submit" type="submit" value=" Login ">
+<br><A href="reg.php">Register</a>
+<span><?php echo $error; ?></span>
+</div>
+
+</form>
+</div>
 <?php
-
-
-// Create connection
-
-include("dbconnect.php");
-
-$sql = "SELECT * FROM MyGuests";
-$result = dbcon("CIA2503",$sql);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    echo "<div id='mtable'>";
-    echo '<table class="table">';
-    echo "<th>ID</th><th>Firstname</th><th>Lastname</th>";
-
-    while($row = $result->fetch_assoc()) {
-        $x = $row['id'];
-        $url = "<a class='btn btn-primary' href='page2.php?id=" . $x . "&fname=" . $row["firstname"] . "&lname=" . $row["lastname"] . "'>";
-        echo "<tr class='danger'>";
-        echo  "<td>" . $url . $x . "</a>" . "</td><td>" . $row["firstname"] . "</td><td>" . $row["lastname"]. "</td>";
-        echo "</tr>";
-    }
-} else {
-    echo "0 results";
-}
-echo "</table>";
-echo "<div>";
-
+require_once('footer.php');
 ?>
 </body>
-
+</html>
