@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 15, 2016 at 09:24 PM
+-- Generation Time: Sep 16, 2016 at 04:39 AM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -47,20 +47,6 @@ CREATE TABLE IF NOT EXISTS `crn` (
   `marks` int(3) DEFAULT NULL,
   `grade` int(11) DEFAULT NULL,
   `facultyID` varchar(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `faculty`
---
-
-CREATE TABLE IF NOT EXISTS `faculty` (
-  `facultyID` varchar(11) NOT NULL,
-  `fullname` int(11) NOT NULL,
-  `email` int(11) NOT NULL,
-  `phone` int(11) NOT NULL,
-  `photo` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -165,21 +151,6 @@ INSERT INTO `MyGuests` (`id`, `firstname`, `lastname`, `email`, `reg_date`, `fil
 -- --------------------------------------------------------
 
 --
--- Table structure for table `student`
---
-
-CREATE TABLE IF NOT EXISTS `student` (
-  `id` varchar(11) NOT NULL,
-  `fullname` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `phone` varchar(14) NOT NULL,
-  `password` varchar(15) NOT NULL,
-  `photo` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `user`
 --
 
@@ -187,7 +158,8 @@ CREATE TABLE IF NOT EXISTS `user` (
   `username` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
   `fullname` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL
+  `email` varchar(50) NOT NULL,
+  `userType` varchar(2) NOT NULL DEFAULT 'ST'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -207,21 +179,9 @@ ALTER TABLE `crn`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `faculty`
---
-ALTER TABLE `faculty`
-  ADD PRIMARY KEY (`facultyID`);
-
---
 -- Indexes for table `MyGuests`
 --
 ALTER TABLE `MyGuests`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `student`
---
-ALTER TABLE `student`
   ADD PRIMARY KEY (`id`);
 
 --
