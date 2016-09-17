@@ -1,15 +1,14 @@
 <?php
 echo "<div id='header'>";
-echo "<img src='http://www.softconn.com.br/Imagens/sis/sis256.png' width='120' hieght='60' alt='Logo'>";
+echo "<h2>Student Information System</h2>";
 echo "</div>";
 ?>
 
 <style>
-img{
-    margin-left: 45%;
-}
-
 #header{
+    text-align:center;
     background: gold;
+    height: 120px;
+    padding: 20px;
 }
 </style>
