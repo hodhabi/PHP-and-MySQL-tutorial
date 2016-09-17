@@ -15,6 +15,7 @@ img{
     margin-left: 45%;
 }
 
+
 #footer{
     background: gray;
     height: 100px;
