@@ -32,7 +32,7 @@ if ($userType=="AD")
 <h2>Courses</h2>
 
 <div class="btn-group btn-group-justified">
-  <a href="newCourse.php" class="btn btn-primary">Add</a>
+  <a href="addcourse.php" class="btn btn-primary">Add</a>
   <a href="editCourse.php" class="btn btn-primary">Edit</a>
   <a href="deleteCourse.php" class="btn btn-primary">Delete</a>
   <a href="listCourse.php" class="btn btn-primary">List</a>
