@@ -35,7 +35,7 @@ if ($userType=="AD")
   <a href="addcourse.php" class="btn btn-primary">Add</a>
   <a href="editCourse.php" class="btn btn-primary">Edit</a>
   <a href="deleteCourse.php" class="btn btn-primary">Delete</a>
-  <a href="listCourse.php" class="btn btn-primary">List</a>
+  <a href="listCourses.php" class="btn btn-primary">List</a>
   
 </div>
 
