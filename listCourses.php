@@ -32,7 +32,7 @@ if ($result->num_rows > 0) {
    echo "<th>Code</th><th>Course Title</th><th>Credits</th>";
     while($row = $result->fetch_assoc()) {
    $ccode = $row['code'];
-   $bt = "<a class='btn btn-default'' href='editCourse.php?code=$ccode'>" . "Edit</A>";
+   $bt = "<a class='btn btn-success' href='editCourse.php?code=$ccode'>" . "Edit</A>";
 
     echo "<tr><td>" . $bt . " " . $row['code'] . "</td><td>" . $row['Course title'] . "</td><td>" .  $row['credits'] . "</td></tr>";
 
