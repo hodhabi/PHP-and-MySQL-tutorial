@@ -17,6 +17,6 @@
     text-align:center;
     background: gold;
     height: 120px;
-    padding: 20px;
+    padding: 5px;
 }
 </style>
