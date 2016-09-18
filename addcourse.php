@@ -1,7 +1,6 @@
 <?php
 include('session.php');
 require_once('header.php');
-include("dbconnect.php");
 
 if(isset($_POST['submit'])) 
 { 

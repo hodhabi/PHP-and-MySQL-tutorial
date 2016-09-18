@@ -1,18 +1,22 @@
 <?php
-// Establishing Connection with Server by passing server_name, user_id and password as a parameter
-$connection = mysql_connect("localhost", "root", "");
-// Selecting Database
-$db = mysql_select_db("CIA2503", $connection);
+include('dbconnect.php');
+
 session_start();// Starting Session
-// Storing Session
 $user_check=$_SESSION['login_user'];
-// SQL Query To Fetch Complete Information Of User
-$ses_sql=mysql_query("select * from user where username='$user_check'", $connection);
-$row = mysql_fetch_assoc($ses_sql);
-$login_session =$row['username'];
-$userType=$row['userType'];
+$sql = "select * from user where username='$user_check'";
+$result = dbcon("CIA2503",$sql);
+
+if ($result->num_rows > 0) {
+   
+    while($row = $result->fetch_assoc()) {
+    $login_session =$row['username'];
+    $userType=$row['userType'];
+    
+    }
+}
+
 if(!isset($login_session)){
-mysql_close($connection); // Closing Connection
 header('Location: index.php'); // Redirecting To Home Page
 }
+
 ?>
