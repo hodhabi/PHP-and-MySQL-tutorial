@@ -49,14 +49,13 @@ h1{
 
 
 <div id="ff">
-<form action="" method="post">
+<form action="login.php" method="post">
 
 <div class="form-group">
 <input class="form-control" id="name" name="username" placeholder="username" type="text">
 <input class="form-control" id="password" name="password" placeholder="**********" type="password">
 <input class="btn btn-default" name="submit" type="submit" value=" Login ">
-<br><A href="reg.php">Register</a>
-<span><?php echo $error; ?></span>
+
 </div>
 
 </form>
