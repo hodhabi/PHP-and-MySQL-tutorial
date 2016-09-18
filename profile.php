@@ -19,7 +19,7 @@ require_once('header.php');
 <center>
 <div id="profile">
 <b id="welcome">Welcome : <i><?php echo $login_session; ?></i></b>
-<b id="logout"><a class='btn btn-danger' href="logout.php">Log Out</a></b>
+
 </div>
 <?php 
 if ($userType=="AD")
