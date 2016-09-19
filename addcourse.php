@@ -48,8 +48,8 @@ header('Location: profile.php');
    <input class="form-control" type="number" name="ccredit" placeholder="Credit"><br>
 
    <select class="form-control" name="cstatus">
-    <option value="1o">Active</option>
-    <option value="saab">In-active</option>
+    <option value="1">Active</option>
+    <option value="0">In-active</option>
   </select>
 
    <input class="btn btn-default" type="submit" name="submit" value="Add"><br>

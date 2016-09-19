@@ -13,7 +13,6 @@ header("location: profile.php");
 <html>
 <head>
 <title>Student Information Systems</title>
-<link href="style.css" rel="stylesheet" type="text/css">
 <Style>
 
 
@@ -30,9 +29,6 @@ header("location: profile.php");
 h1{
   text-align: center;
 }
-
-	
-
 
 </Style>
 
@@ -52,9 +48,9 @@ h1{
 <form action="login.php" method="post">
 
 <div class="form-group">
-<input class="form-control" id="name" name="username" placeholder="username" type="text">
-<input class="form-control" id="password" name="password" placeholder="**********" type="password">
-<input class="btn btn-default" name="submit" type="submit" value=" Login ">
+<input class="form-control" name="username" placeholder="username" type="text">
+<input class="form-control" name="password" placeholder="**********" type="password">
+<input class="btn btn-info" name="submit" type="submit" value=" Login ">
 
 </div>
 

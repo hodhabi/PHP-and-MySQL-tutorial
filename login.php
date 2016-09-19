@@ -13,11 +13,6 @@ include('dbconnect.php');
 $username=$_POST['username'];
 $password=$_POST['password'];
 
-$username = stripslashes($username);
-$password = stripslashes($password);
-$username = mysql_real_escape_string($username);
-$password = mysql_real_escape_string($password);
-
 $sql = "select * from user where password='$password' AND username='$username'";
 $result = dbcon("CIA2503",$sql);
 
