@@ -32,7 +32,14 @@ if ($result->num_rows > 0) {
    echo "<th>Code</th><th>Course Title</th><th>Credits</th>";
     while($row = $result->fetch_assoc()) {
    $ccode = $row['code'];
-   $bt = "<a class='btn btn-success' href='editCourse.php?code=$ccode'>" . "Edit</A>";
+   $tpage ='editCourse.php';
+   
+
+   $x = "sSession('$ccode')";
+
+
+
+   $bt = "<Button onclick=$x>EDIT</Button>";
 
     echo "<tr><td>" . $bt . " " . $row['code'] . "</td><td>" . $row['Course title'] . "</td><td>" .  $row['credits'] . "</td></tr>";
 
@@ -43,6 +50,18 @@ if ($result->num_rows > 0) {
 }
 
 
+
 ?>
+
+<script>
+
+function sSession(s){
+
+  $.post('editCourse.php', s);
+  alert(s);
+  
+}
+
+</script>
 </BODY>
 </HTML>

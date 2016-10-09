@@ -19,4 +19,11 @@ if(!isset($login_session)){
 header('Location: index.php'); // Redirecting To Home Page
 }
 
+//This function recieves the name of the session and the value to sit and targeted page
+function storeSession($s,$sv,$tpage){
+    echo "hghhghgh";
+$_SESSION['$s'] = $sv;
+header("Location: $tpage");
+}
+
 ?>
